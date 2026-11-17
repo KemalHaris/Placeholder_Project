@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Placeholder Forms</title>
+</head>
+<body>
+  <h1>Placeholder Forms</h1>
+
+  <form id="form">
+    <p>
+      <label for="name">Nama:</label><br>
+      <input type="text" id="name" name="name" maxlength="100" required>
+    </p>
+
+    <p>
+      <label for="age">Umur:</label><br>
+      <input type="number" id="age" name="age" min="0" max="120" required>
+    </p>
+
+    <p>
+      <label for="message">Pesanmu:</label><br>
+      <textarea id="message" name="message" rows="5" cols="40" maxlength="1000"></textarea>
+    </p>
+
+    <!-- Honeypot: hidden from real users, bots tend to fill it -->
+    <input type="text" name="website" style="display:none" tabindex="-1" autocomplete="off">
+
+    <button type="submit" id="submit-btn">Submit</button>
+  </form>
+
+  <p id="status"></p>
+
+  <script src="script.js"></script>
+</body>
+</html>
